@@ -1,0 +1,22 @@
+set term png
+
+set xlabel '$\mu_N$; $3\mu_q$; (MeV)'
+set ylabel '$p_N$; $p_q$; ($\rm{MeV}/\rm{fm}^3$)'
+set out "quark-hadron_phase_transition.png"
+set xrange[750:1750]
+plot "pressure_chem_pot_hadrons.dat" w l t 'hadrons', "pressure_chem_pot_quarks.dat" u (3*$1):2 w l t 'quarks'
+set term tikz size 86mm, 10cm
+set out "quark-hadron_phase_transition.tex"
+replot
+
+set term png
+set xlabel '$\rho_B$ ($\rm{fm}^{-3}$)'
+set ylabel '$\ln(p_N)$; $\ln(p_q)$'
+set format y '$10^{%+03T}$'
+set logscale y
+set out "quark-hadron_phase_transition2.png"
+set xrange[*:*]
+plot "pressure_hadrons.dat" w l t 'hadrons', "pressure_quarks.dat" w l t 'quarks'
+set term tikz size 86mm, 10cm
+set out "quark-hadron_phase_transition2.tex"
+replot

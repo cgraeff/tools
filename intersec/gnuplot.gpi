@@ -1,0 +1,20 @@
+set term png
+
+set grid xtics, mxtics, ytics, mytics
+
+set xtics 800, 100, 1700
+set mxtics 2
+
+set ytics -100, 100, 800
+set mytics 2
+
+set xrange[750:1750]
+
+set xlabel "chemical potential (MeV)"
+set ylabel "pressure (MeV/fm^3)"
+
+set out "output.png"
+
+unset key
+
+plot "hadron_set.dat" w l, "quark_set.dat" u (3*$1):2 w l

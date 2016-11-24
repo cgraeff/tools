@@ -1,4 +1,4 @@
-TARGET = intercept
+TARGET = intersec
 LIBS = -lm -lgsl -lgslcblas
 CC = gcc
 CFLAGS = -g -Wall -Wno-unknown-pragmas

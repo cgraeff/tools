@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for selectedpath in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+do
+    maintex = "\documentclass[tikz]{standalone}
+               \usepackage{gnuplot-lua-tikz}
+               \begin{document}
+	           \input{$selectedpath}
+               \end{document}
+               "
+    echo -e "$maintex" > main.tex
+    
+    pdflatex main.tex
+    
+    mv main.pdf $selectedpath.pdf
+    
+done

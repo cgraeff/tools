@@ -9,10 +9,13 @@ transform in pdf.
 * The `standalone` package
 
 ## Install
-Copy `tikztopdf` to `~/.local/share/nautilus/scripts/`.
+Copy `tikztopdf` to `~/.local/share/nautilus/scripts/`. In a terminal, mark
+the file as executable with `chmod +x tikztopdf`.
 
 ## Running
-In Nautilus (Gnome Files), right click a `.tex` file (or a group of files) generated with `gnuplot`, select "Scripts" and select "tikztopdf". The file will be processed with the `standalone` document class.
+In Nautilus (Gnome Files), right click a `.tex` file (or a group of files)
+generated with `gnuplot`, select "Scripts" and select "tikztopdf". The file
+will be processed with the `standalone` document class.
 
 ## Limitations
 * It will fail for fancy filenames
